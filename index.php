@@ -11,7 +11,7 @@
                 $mysqli = new mysqli('localhost', 'root', 'root', 'todo'); 
                 $query = "SELECT * FROM todo ORDER BY date ASC, time ASC";
                 if ($result = $mysqli->query($query)) {
-                  $numrows = $result->num_rows:
+                  $numrows = $result->num_rows;
                   if ($numrows>0) {
                     while($row = $result->fetch_assoc()){
                       $task_id = $row['id'];
